@@ -1,0 +1,13 @@
+{
+    "name": "pesho/php-test",
+    "description": "Comission Converter Refactoring",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4":{
+            "ComissionCli\\": "src/"
+        }
+    }
+}
