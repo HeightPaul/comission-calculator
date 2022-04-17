@@ -59,33 +59,33 @@ class ComissionHelper
     public function isEu(string $country): bool
     {
         switch($country) {
-            case CountryCodes::AT:
-            case CountryCodes::BE:
-            case CountryCodes::BG:
-            case CountryCodes::CY:
-            case CountryCodes::CZ:
-            case CountryCodes::DE:
-            case CountryCodes::DK:
-            case CountryCodes::EE:
-            case CountryCodes::ES:
-            case CountryCodes::FI:
-            case CountryCodes::FR:
-            case CountryCodes::GR:
-            case CountryCodes::HR:
-            case CountryCodes::HU:
-            case CountryCodes::IE:
-            case CountryCodes::IT:
-            case CountryCodes::LT:
-            case CountryCodes::LU:
-            case CountryCodes::LV:
-            case CountryCodes::MT:
-            case CountryCodes::NL:
-            case CountryCodes::PO:
-            case CountryCodes::PT:
-            case CountryCodes::RO:
-            case CountryCodes::SE:
-            case CountryCodes::SI:
-            case CountryCodes::SK:
+            case CountryCodes::AUSTRIA:
+            case CountryCodes::BELGIUM:
+            case CountryCodes::BULGARIA:
+            case CountryCodes::CYPRUS:
+            case CountryCodes::CZECH_REPUBLIC:
+            case CountryCodes::GERMANY:
+            case CountryCodes::DENMARK:
+            case CountryCodes::ESTONIA:
+            case CountryCodes::SPAIN:
+            case CountryCodes::FINLAND:
+            case CountryCodes::FRANCE:
+            case CountryCodes::GREECE:
+            case CountryCodes::CROATIA :
+            case CountryCodes::HUNGARY:
+            case CountryCodes::IRELAND:
+            case CountryCodes::ITALY:
+            case CountryCodes::LITHUANIA:
+            case CountryCodes::LUXEMBOURG:
+            case CountryCodes::LATVIA:
+            case CountryCodes::MALTA:
+            case CountryCodes::NETHERLANDS:
+            case CountryCodes::POLAND:
+            case CountryCodes::PORTUGAL:
+            case CountryCodes::ROMANIA:
+            case CountryCodes::SWEDEN:
+            case CountryCodes::SLOVENIA:
+            case CountryCodes::SLOVAKIA:
                 return true;
             default:
                 return false;

@@ -60,9 +60,9 @@ class ComissionHelperTest extends TestCase
         $comissionHelper = $this->createMock(ComissionHelper::class);
         $comissionHelper->expects(self::once())
                         ->method('isEu')
-                        ->with(CountryCodes::LT)
+                        ->with(CountryCodes::LITHUANIA)
                         ->willReturn(true);
-        $isEu = $comissionHelper->isEu(CountryCodes::LT);
+        $isEu = $comissionHelper->isEu(CountryCodes::LITHUANIA);
         self::assertTrue($isEu);
     }
 }

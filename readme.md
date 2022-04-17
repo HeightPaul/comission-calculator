@@ -15,8 +15,8 @@ Refactoring
 - bin search: https://lookup.binlist.net/
 - exchange rate: https://api.exchangeratesapi.io/latest
 
-## Execute commands to procceed:
-1. `composer install` - autoload and install dependancies
+## Execute commands to proceed with:
+1. `composer install` - generate autoloader and install dependancies
 2. `php app.php input.txt` - run comission converter
 3. `vendor/bin/phpunit tests/Unit` - run unit tests
 4. `vendor/bin/phpunit tests/Functional` - run functional tests
