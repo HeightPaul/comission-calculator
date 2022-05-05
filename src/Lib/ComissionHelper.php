@@ -5,6 +5,7 @@ namespace ComissionCli\Lib;
 use ComissionCli\Constants\CurrencyCodes;
 use ComissionCli\Constants\CountryCodes;
 use ComissionCli\Lib\ApiRequest;
+use ReflectionClass;
 
 /**
  * @brief Commission library class as helper
@@ -58,38 +59,11 @@ class ComissionHelper
 
     public function isEu(string $country): bool
     {
-        switch($country) {
-            case CountryCodes::AUSTRIA:
-            case CountryCodes::BELGIUM:
-            case CountryCodes::BULGARIA:
-            case CountryCodes::CYPRUS:
-            case CountryCodes::CZECH_REPUBLIC:
-            case CountryCodes::GERMANY:
-            case CountryCodes::DENMARK:
-            case CountryCodes::ESTONIA:
-            case CountryCodes::SPAIN:
-            case CountryCodes::FINLAND:
-            case CountryCodes::FRANCE:
-            case CountryCodes::GREECE:
-            case CountryCodes::CROATIA :
-            case CountryCodes::HUNGARY:
-            case CountryCodes::IRELAND:
-            case CountryCodes::ITALY:
-            case CountryCodes::LITHUANIA:
-            case CountryCodes::LUXEMBOURG:
-            case CountryCodes::LATVIA:
-            case CountryCodes::MALTA:
-            case CountryCodes::NETHERLANDS:
-            case CountryCodes::POLAND:
-            case CountryCodes::PORTUGAL:
-            case CountryCodes::ROMANIA:
-            case CountryCodes::SWEDEN:
-            case CountryCodes::SLOVENIA:
-            case CountryCodes::SLOVAKIA:
-                return true;
-            default:
-                return false;
+        $countryCodes = (new ReflectionClass(CountryCodes::class))->getConstants();
+        if(in_array($country, $countryCodes)) {
+            return true;
         }
+        return false;
     }
 
     private function checkLoadedRates(): void
